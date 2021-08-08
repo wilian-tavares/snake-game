@@ -1,0 +1,16 @@
+body {
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    color: rgb(27, 126, 36);
+    background-color: rgb(70, 14, 70)
+    
+}
+
+canvas {
+    background: red;
+}
