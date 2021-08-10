@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script defer src='script.js'>
+        function fimDeJogo() {
+            clearInterval(jogo);
+            // alert('Game Over :(');
+            window.location.href = 'game-over.html'
+        }
+
+        document.getElementById('pontos').innerHTML = ponto;
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>Snake - Game-Over</title>
+</head>
+
+<body>
+    <h1>SNAKE GAME!</h1>
+    <h2>Pontos = <span id='pontos'>0</span></h2>
+    <img src="img/game-over.jpg" alt="Game-Over">
+
+    <button onclick="retornarJogo()" class='iniciar-jogo'>Iniciar Jogo</button>
+
+
+</body>
+
+</html>

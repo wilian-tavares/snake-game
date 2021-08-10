@@ -3,6 +3,7 @@ let context = canvas.getContext("2d"); //....
 let box = 32;
 let snake = []; //criar cobrinha como lista, já que ela vai ser uma série de coordenadas, que quando pintadas, criam os quadradinhos
 let ponto = 0;
+
 snake[0] = {
     x: 8 * box,
     y: 8 * box
@@ -47,28 +48,22 @@ function iniciarJogo() {
     // Finaliza o Game se bater nas Paredes
 
     if (snake[0].x > 15 * box && direction == "right") {
-        clearInterval(jogo);
-        alert('Game Over :(');
+        fimDeJogo()
     };
     if (snake[0].x < 0 && direction == 'left') {
-        clearInterval(jogo);
-        alert('Game Over :(');
+        fimDeJogo()
     };
 
     if (snake[0].y > 15 * box && direction == "down") {
-        clearInterval(jogo);
-        alert('Game Over :(');
+        fimDeJogo()
     };
     if (snake[0].y < 0 && direction == 'up') {
-
-        clearInterval(jogo);
-        alert('Game Over :(');
+        fimDeJogo()
     };
 
     for (i = 1; i < snake.length; i++) {
         if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-            clearInterval(jogo);
-            alert('Game Over :(');
+            fimDeJogo()
         }
     }
 
@@ -95,7 +90,6 @@ function iniciarJogo() {
 
 
         document.getElementById('pontos').innerHTML = ponto;
-
     }
 
     let newHead = {
@@ -109,3 +103,11 @@ function iniciarJogo() {
 
 
 let jogo = setInterval(iniciarJogo, 100);
+
+function fimDeJogo() {
+    clearInterval(jogo);
+    window.location.href = 'game-over.html'
+}
+function retornarJogo() {
+    window.location.href = 'index.html'
+}
