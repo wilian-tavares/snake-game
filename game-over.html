@@ -11,6 +11,7 @@
             clearInterval(jogo);
             // alert('Game Over :(');
             window.location.href = 'game-over.html'
+            pontuacao()
         }
 
         document.getElementById('pontos').innerHTML = ponto;
@@ -25,6 +26,7 @@
     <img src="img/game-over.jpg" alt="Game-Over">
 
     <button onclick="retornarJogo()" class='iniciar-jogo'>Iniciar Jogo</button>
+
 
 
 </body>

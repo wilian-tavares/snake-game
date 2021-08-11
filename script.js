@@ -88,8 +88,11 @@ function iniciarJogo() {
         ponto += 1;
         console.log(ponto);
 
+        function pontuacao() {
+            document.getElementById('pontos').innerHTML = ponto;
 
-        document.getElementById('pontos').innerHTML = ponto;
+        }
+        pontuacao();
     }
 
     let newHead = {
