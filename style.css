@@ -45,10 +45,10 @@ canvas {
 
 
     @media only screen and (max-width: 768px) {
-        body {
+        canvas {
           color: lightblue;
-          width: 80%; 
-          height: 80%;
+          width: 100vw; 
+          height: 100vh;
         }
         .pagina-inicial-principal img {
             display: flex;
